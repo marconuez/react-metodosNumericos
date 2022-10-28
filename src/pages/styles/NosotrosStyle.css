@@ -1,0 +1,252 @@
+.contenedorbody{
+    background-color: #181E24;
+    height: 96.10vh;
+}
+
+.contenedorPrimario{
+    display: flex;
+    background-color: #181E24;
+    /* align-items: center; */
+    justify-content: space-around;
+    /* margin-top: 200px; */
+    height: 95.9vh;
+    /* background-color: #4973ff; */
+}
+
+.img{
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+}
+
+.carta{
+    width: 80%;
+    height: 80%;
+    background-color: #1F2831;
+    /* left: 0; */
+    /* margin: 80%; */
+    margin-top: 70px;
+    margin-left: 80%;
+    margin-right: 80%;
+    position: absolute;
+    border-radius: 20px;
+
+}
+
+.contenedorWall{
+    position: absolute;
+    /* background-color: white; */
+    margin-left:120px;
+    margin-top: 20px;
+    margin-right: 20px;
+    /* margin: 20px; */
+    /* width: 65%; */
+    /* height: 25%; */
+    padding: 5px;
+    border-radius: 20px;
+    /* border: 5px solid rgb(255, 255, 255); */
+    /* animation: animate 2s normal; */
+}
+
+.buttonContenedor{
+    position: absolute;
+    border-radius: 20px;
+    width: 100%;
+    bottom: 350px;
+}
+
+.buttonCentro{
+    padding: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 20px;
+    border: 5px solid rgb(255, 255, 255);
+    animation: animacionDiv 2s linear infinite;
+}
+
+.btnCentro{
+    font-family: '8BIT WONDER', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+
+@keyframes animacionDiv {
+    0%, 100%{
+        background-color: transparent;
+    }
+    50%{
+        background-color: rgb(0, 0, 0);
+    }
+    75%{
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+.headertitle{
+    position: absolute;
+    bottom: 60px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.contenedorApps{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    /* background-color: white; */
+    justify-content: center;
+    /* align-items: center; */
+    /* margin: 10%; */
+    width: 100%;
+    /* margin-left: 20%; */
+    /* background-color: red; */
+}
+
+.contenedorCadaApp{
+    background-color: white;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 50px;
+    border: 5px solid rgb(0, 0, 0);
+    font-family: '8BIT WONDER', sans-serif;
+    color: #000000;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+}
+
+.headerTexto{
+    font-family: '8BIT WONDER', sans-serif;
+    color: #fff;
+    font-size: 16px;
+}
+
+.contenedorTexto{
+    /* background-color: white; */
+    /* font-family: monospace; */
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    /* border-right: .15em solid rgb(255, 255, 255);  */
+    white-space: nowrap; 
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    animation: 
+        typing 3.5s steps(30, end),
+        blink-caret .5s step-end infinite;
+   
+    font-family: '8BIT WONDER', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(255, 255, 255); }
+}
+
+
+
+.contenedorCadaApp:hover{
+    background-color: rgb(255, 255, 255);
+    /* filter: invert(); */
+    border: 5px solid rgb(0, 0, 0);
+    animation: animate2 2s ;
+}
+
+@keyframes animate2 {
+    0%{
+        background-color: transparent;
+    }
+    100%{
+        background-color: white;
+    }
+}
+
+
+@keyframes animate {
+    0%{
+        background-color: transparent;
+        width: 0%;
+    }
+    100%{
+        background-color: white;
+        color: black;
+        width: 65%;
+    }
+}
+
+.circle{
+    position: fixed;
+    left: 12%;
+    top: 150px;
+    background-color: #1F2831;
+    /* top: 50%; */
+    /* left: 50%; */
+    transform: translate(-50%,-50%);
+    width: 150px;
+    height: 150px; 
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 10px 0px 80px rgb(98, 255, 19);
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 99;
+    animation: circle 2s linear infinite;
+    /* transition-duration: 0.5s; */
+    /* transition-timing-function: linear; */
+}
+
+@keyframes circle {
+    0%, 100%{
+        box-shadow: 0px 0px 0px rgb(98, 255, 19);
+    }
+    50%{
+        box-shadow: 0px 0px 40px rgb(0, 255, 251);
+    }
+}
+
+
+
+    /* .wave{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #4973ff;
+        border-radius: 50%;
+        box-shadow: inset 0 0 50px rgba(0, 0, 0,.5);
+    }
+.wave:before,
+.wave:after{
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-75%);
+    background: #000;
+}
+  .wave:before{
+    border-radius: 45%;
+    background: rgba(255,255,255,1);
+    animation: animate 5s linear infinite;
+  }
+  .wave:after{
+    border-radius: 40%;
+    background: rgba(255,255,255,.5);
+    animation: animate 10s linear infinite;
+  }
+  @keyframes animate {
+    0%{
+      transform:translate(-50%,-75%)rotate(0deg);
+    }
+    100%{
+      transform:translate(-50%,-75%)rotate(360deg)
+    }
+  } */
+  
