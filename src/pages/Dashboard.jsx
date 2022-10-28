@@ -10,7 +10,7 @@ export const Dashboard = () => {
       <div className="container mt-5 contenedorDad">
 
             <br />
-        <h2>Integrantes de metodos</h2>
+        <h2>Integrantes de métodos</h2>
             <hr /> 
             <br />
         <div className="contenedorCentro row row-cols-2 row-cols-md-3">

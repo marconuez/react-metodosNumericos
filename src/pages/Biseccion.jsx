@@ -17,7 +17,7 @@ export const Biseccion = () => {
 
     return (
         <div className='container mt-5 animate__animated animate__slideInLeft'>
-            <HeaderBis title='Biseccion' number={number} handleInput={handleInput} funcion={bisection}/>
+            <HeaderBis title='Bisección' number={number} handleInput={handleInput} funcion={bisection}/>
            
             {
                 iscalculosfull && (

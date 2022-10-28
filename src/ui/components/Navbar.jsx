@@ -5,7 +5,7 @@ export const Navbar = () => {
     return (
         <nav className="navbar navbar-dark bg-dark fixed-top">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">Metodos Numericos</a>
+                <a className="navbar-brand" href="#">Métodos Numéricos</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                 <span className="navbar-toggler-icon"></span>
                 </button>
