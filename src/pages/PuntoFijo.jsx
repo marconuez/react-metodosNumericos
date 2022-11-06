@@ -14,27 +14,17 @@ export const PuntoFijo = () => {
         }
     }, [number.numeroIteraciones])
     
-
     return (
-        <div className='animate__animated mt-5 container animate__slideInLeft'>
-            <div className="row">
-                <div className="col">
-                    <Header title='Método de Punto fijo' number={number} iscalculosfull={iscalculosfull} handleInput={handleInput} funcion={puntoFijo}/>
-
-                </div>
+        <div className= {(calculos.length===0)? 'container mx-auto mt-5 animate__animated animate__fadeIn' : !!calculos ? ' mx-auto mt-5 animate__animated animate__fadeInRight ' : '' } >
+            <div className='mt-12 mx-10 lg:flex  '>
+                <Header title='Método de Punto fijo' number={number} iscalculosfull={iscalculosfull} handleInput={handleInput} funcion={puntoFijo} />
+                {
+                    iscalculosfull && (
+                        <Table calculos={calculos} />
+                    )
+                }
             </div>
-            
-            {   
-                iscalculosfull && 
-                (
-                    <div className="mt-5 table-responsive">
-                        <Table calculos={calculos}/>
-
-                    </div>
-                )
-            }
-
         </div>
-
     )
 }
+

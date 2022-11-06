@@ -5,28 +5,29 @@ import useFunBiseccion from '../hooks/useFunBiseccion'
 
 export const Biseccion = () => {
 
-    const {calculos,iscalculosfull,number,setNumber,handleInput, bisection} = useFunBiseccion();
+    const { calculos, iscalculosfull, number, setNumber, handleInput, bisection } = useFunBiseccion();
 
     useEffect(() => {
-        if(!Number(number.numeroIteraciones <= 0 )){
+        if (!Number(number.numeroIteraciones <= 0)) {
 
-            const valorNuevo = (0.5* Math.pow(10, 2-number.numeroIteraciones));
-            setNumber({...number, criterioTolerancia: valorNuevo});
+            const valorNuevo = (0.5 * Math.pow(10, 2 - number.numeroIteraciones));
+            setNumber({ ...number, criterioTolerancia: valorNuevo });
         }
     }, [number.numeroIteraciones])
 
     return (
-        <div className='container mt-5 animate__animated animate__slideInLeft'>
-            <HeaderBis title='Bisección' number={number} handleInput={handleInput} funcion={bisection}/>
-           
-            {
-                iscalculosfull && (
-                    <div className='table-responsive'>
-                        <TableBiseccion calculos={calculos} />
-                    </div>
-                )
-            }
-
-        </div>
+        <>
+            <div className= {(calculos.length===0)? 'container mx-auto mt-5 animate__animated animate__fadeIn' : !!calculos ? ' mx-auto mt-5 animate__animated animate__fadeInRight ' : '' } >
+                <div className='mt-12 mx-10 md:flex'>
+                    <HeaderBis title='Método de Bisección' number={number} handleInput={handleInput} funcion={bisection} />
+                    {
+                        iscalculosfull && (
+                            <TableBiseccion calculos={calculos} />
+                        )
+                    }
+                </div>
+            </div>
+        </>
     )
 }
+
