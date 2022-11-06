@@ -1,24 +1,32 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { HeaderBis } from '../components/HeaderBis';
+import { TableBiseccion } from '../components/TableBiseccion';
+import useFalsaPosicion from '../hooks/useFalsaPosicion';
 
 export const FalsaPosicion = () => {
+
+  const { calculos, iscalculosfull, number, setNumber, handleInput, FalsaPosicion } = useFalsaPosicion();
+  useEffect(() => {
+    if (!Number(number.numeroIteraciones <= 0)) {
+
+      const valorNuevo = (0.5 * Math.pow(10, 2 - number.numeroIteraciones));
+      setNumber({ ...number, criterioTolerancia: valorNuevo });
+    }
+  }, [number.numeroIteraciones])
+
   return (
-    <div className='container mt-5 animate__animated animate__slideInLeft'>
-        <br />
-        <h1>Falsa Posición</h1>
-        <hr />
-        <br />
-        <div className="row row-cols-2 row-cols-md-1 g-4">
-            <div className="col">
-                <div className="card">
-                <div className="card-body">
-                    <h5 className="card-title">Falsa Posición - Ejemplo #1</h5>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, velit ea iure, dolorem eius assumenda veniam amet enim omnis ullam repellat tempore dolore distinctio ducimus maiores! Neque dolorem nulla ab.</p>
-                    <NavLink classNameName="nav-item nav-link" to="/FalsaPosicionEjemplo_1"><a href="#" className="btn btn-dark">Ir al ejemplo</a></NavLink>
-                </div>
-                </div>
-            </div>
+    <>
+      <div className= {(calculos.length===0)? 'container mx-auto mt-5 animate__animated animate__fadeIn' : !!calculos ? ' mx-auto mt-5 animate__animated animate__fadeInRight ' : '' } >
+        <div className='mt-12 mx-10 lg:flex '>
+            <HeaderBis title='Método de Falsa Posición' number={number} handleInput={handleInput} funcion={FalsaPosicion} />
+          {
+            iscalculosfull && (
+              <TableBiseccion calculos={calculos} />
+            )
+          }
         </div>
-    </div>
+      </div>
+    </>
   )
 }
+// 

@@ -11,7 +11,7 @@ export const Navbar = () => {
                 </button>
                 <div className="offcanvas offcanvas-end text-bg-dark" tabIndex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                 <div className="offcanvas-header">
-                    <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">Funciones</h5>
+                    <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">Métodos</h5>
                     <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
 
@@ -20,27 +20,27 @@ export const Navbar = () => {
                     <div className="navbar-nav justify-content-end flex-grow-1 pe-3 ">
                         <li className="nav-item">
                             <nav className="nav-link btn btn-dark" aria-current="page" href="#" data-bs-dismiss="offcanvas">
-                                <NavLink className="nav-item nav-link" to="/">Dashboard</NavLink>
+                                <NavLink className="nav-item nav-link text-left p-2" to="/">Dashboard</NavLink>
                             </nav>
                         </li>
                         <li className="nav-item">
                             <nav className="nav-link btn btn-dark" aria-current="page" href="#" data-bs-dismiss="offcanvas">
-                                <NavLink className="nav-item nav-link" to="/punto-fijo">Punto Fijo</NavLink>
+                                <NavLink className="nav-item nav-link text-left p-2" to="/punto-fijo">Método de Punto Fijo</NavLink>
                             </nav>
                         </li>
                         <li className="nav-item">
                             <nav className="nav-link btn btn-dark" aria-current="page" href="#" data-bs-dismiss="offcanvas">
-                                <NavLink className="nav-item nav-link" to="/newton">Newton Raphson</NavLink>
+                                <NavLink className="nav-item nav-link text-left p-2" to="/newton">Método de Newton Raphson</NavLink>
                             </nav>
                         </li>
                         <li className="nav-item">
                             <nav className="nav-link btn btn-dark" aria-current="page" href="#" data-bs-dismiss="offcanvas">
-                                <NavLink className="nav-item nav-link" to="/biseccion">Bisección</NavLink>
+                                <NavLink className="nav-item nav-link text-left p-2" to="/biseccion">Método de Bisección</NavLink>
                             </nav>
                         </li>
                         <li className="nav-item">
                             <nav className="nav-link btn btn-dark" aria-current="page" href="#" data-bs-dismiss="offcanvas">
-                                <NavLink className="nav-item nav-link" to="/falsaPosicion">Falsa Posición</NavLink>
+                                <NavLink className="nav-item nav-link text-left p-2" to="/falsaPosicion">Método de Falsa Posición</NavLink>
                             </nav>
                         </li>
                     </div>
