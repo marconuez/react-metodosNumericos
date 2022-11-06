@@ -24,7 +24,7 @@ export const Dashboard = () => {
                 <div>
                     <div className='btn btn-dark pointer'>
                         <h3>Marco Nuñez Cabezas</h3>
-                        <h4>FronEnd</h4>
+                        <h4>Front-End, Scrum Master HD 4K, PRO-fornites, Tifón, Maquina, #1, Sucesor de York </h4>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@ export const Dashboard = () => {
                 <div>
                     <div className='btn btn-dark pointer'>
                         <h3>Rafael Molina</h3>
-                        <h4>QA</h4>
+                        <h4>Front-End</h4>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@ export const Dashboard = () => {
                 <div>
                     <div className='btn btn-dark pointer'>
                         <h3>Johan McGregor</h3>
-                        <h4>BackEnd</h4>
+                        <h4>Back-End</h4>
                     </div>
                 </div>
             </div>
