@@ -72,9 +72,9 @@ const useGeneralFuntions = () => {
     ************************************************************************************/
     const searchFuntion = (term, value) => {
         // validating the first term
-        if (term.toLowerCase() === 'sin') {
+        if (term.toLowerCase().includes("sin")) {
             return sin(value);
-        } else if (term.toLowerCase() === 'tan') {
+        } else if (term.toLowerCase().includes("tan")) {
             return tan(value);
         } else if (term.toLowerCase().includes("cos")) {
             return cos(value);
@@ -111,6 +111,18 @@ const useGeneralFuntions = () => {
                 newSecondValue = !isNaN(secondValue) ? secondValue : value;
             }
             return power(newFirtsValue, newSecondValue);
+        } else if (term.includes("+")) {
+            let valuesArray = term.replace("(", "").replace(")", "").split("+");
+            return parseFloat(!isNaN(valuesArray[0]) ? valuesArray[0] : value + !isNaN(valuesArray[1]) ? valuesArray[1] : value);
+        } else if (term.includes("-")) {
+            let valuesArray = term.replace("(", "").replace(")", "").split("-");
+            return parseFloat(!isNaN(valuesArray[0]) ? valuesArray[0] : value - !isNaN(valuesArray[1]) ? valuesArray[1] : value);
+        } else if (term.includes("/")) {
+            let valuesArray = term.replace("(", "").replace(")", "").split("/");
+            return parseFloat(!isNaN(valuesArray[0]) ? valuesArray[0] : value / !isNaN(valuesArray[1]) ? valuesArray[1] : value);
+        } else if (term.includes("*")) {
+            let valuesArray = term.replace("(", "").replace(")", "").split("*");
+            return parseFloat(!isNaN(valuesArray[0]) ? valuesArray[0] : value * !isNaN(valuesArray[1]) ? valuesArray[1] : value);
         }
     }
 
@@ -123,9 +135,9 @@ const useGeneralFuntions = () => {
 
         let firstValue, secondValue;
 
-        firstValue = searchFuntion(leftTerm, value)
-        secondValue = searchFuntion(rightTerm, value)
-
+        firstValue = searchFuntion(rightTerm, value);
+        secondValue = searchFuntion(leftTerm, value);
+        
         switch (operator) {
             case '-':
                 return firstValue - secondValue;

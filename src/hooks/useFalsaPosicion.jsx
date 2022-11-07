@@ -28,8 +28,10 @@ export const useFalsaPosicion = () => {
     event.preventDefault();
     const { funcionString, IntervaloA, IntervaloB } = number;
 
+    let newFuncionString = funcionString.trim().replace(/ /g, "");
+
     // The criteria are separated
-    let valueArray = funcionString.split(")");
+    let valueArray = newFuncionString.split(")");
 
     // The operation between the 2 criteria is obtained
     let operator = valueArray[1][0];
