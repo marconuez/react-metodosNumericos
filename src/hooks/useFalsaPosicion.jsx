@@ -74,7 +74,6 @@ export const useFalsaPosicion = () => {
         };
         setCalculos(calculos => [...calculos, obj]);
 
-
         if (ff == 0) {
           break;
         };

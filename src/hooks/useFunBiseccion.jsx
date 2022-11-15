@@ -54,6 +54,10 @@ export const useFunBiseccion = () => {
     es = 0.5 * Math.pow(10, (2 - number.numeroIteraciones));
     Ar = 0;
 
+    // console.log(validateFunction(rightTerm, leftTerm, operator, a))
+
+    // console.log(validateFunction(rightTerm, leftTerm, operator, b))
+
     if (validateFunction(rightTerm, leftTerm, operator, a) * validateFunction(rightTerm, leftTerm, operator, b) < 0) {
       do {
         // Evaluate in function
