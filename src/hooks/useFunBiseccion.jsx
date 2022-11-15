@@ -8,6 +8,11 @@ export const useFunBiseccion = () => {
   const [calculos, setCalculos] = useState([]);
   const [iscalculosfull, setIscalculosfull] = useState(false);
 
+  const [isError, setIsError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+
+
   const [number, setNumber] = useState(
     {
       funcionString: '',
@@ -31,6 +36,8 @@ export const useFunBiseccion = () => {
   ************************************************************************************/
   const bisection = (event) => {
     event.preventDefault();
+    setErrorMessage('')
+    setIsError(false);
     const { funcionString, IntervaloA, IntervaloB } = number;
 
     // The criteria are separated
@@ -96,6 +103,8 @@ export const useFunBiseccion = () => {
 
     } else {
       console.log("Error, f(x) Discontinua o no hay raíces en el intervalo dado.")
+      setErrorMessage("Error, f(x) Discontinua o no hay raíces en el intervalo dado.")
+      setIsError(true);
     }
   }
 
@@ -105,7 +114,10 @@ export const useFunBiseccion = () => {
     number,
     setNumber,
     handleInput,
-    bisection
+    bisection,
+    isError,
+    errorMessage,
+    setIsError
   })
 
 }
