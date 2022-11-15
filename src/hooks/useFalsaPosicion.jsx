@@ -8,6 +8,9 @@ export const useFalsaPosicion = () => {
   const [calculos, setCalculos] = useState([]);
   const [iscalculosfull, setIscalculosfull] = useState(false);
 
+  const [isError, setIsError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
   const [number, setNumber] = useState(
     {
       funcionString: '',
@@ -26,6 +29,8 @@ export const useFalsaPosicion = () => {
 
   const FalsaPosicion = (event) => {
     event.preventDefault();
+    setErrorMessage('')
+    setIsError(false);
     const { funcionString, IntervaloA, IntervaloB } = number;
 
     let newFuncionString = funcionString.trim().replace(/ /g, "");
@@ -91,6 +96,8 @@ export const useFalsaPosicion = () => {
       setIscalculosfull(true);
     } else {
       console.log("Error, f(x) Discontinua o no hay raíces en el intervalo dado.")
+      setErrorMessage("Error, f(x) Discontinua o no hay raíces en el intervalo dado.")
+      setIsError(true);
     }
   }
 
@@ -100,7 +107,10 @@ export const useFalsaPosicion = () => {
     number,
     setNumber,
     handleInput,
-    FalsaPosicion
+    FalsaPosicion,
+    isError,
+    errorMessage,
+    setIsError
   })
 }
 
