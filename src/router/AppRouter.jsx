@@ -15,11 +15,12 @@ export const AppRouter = () => {
   
   return (
     <>
-   { 
+    <div className="flex flex-no-wrap">
+   {/* { 
       (isNavbarVisible) && (
         <Navbar/> 
       ) 
-    } 
+    }  */}
       <Routes>
           <Route path='punto-fijo' element={<PuntoFijo/>}/>
           <Route path='newton' element={<NewtonRaphson/>}/>
@@ -29,6 +30,7 @@ export const AppRouter = () => {
 
           <Route path='/' element={<Dashboard/>}/>
       </Routes>
+      </div>
     </>
   )
 }

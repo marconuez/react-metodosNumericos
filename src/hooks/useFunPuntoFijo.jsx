@@ -20,7 +20,9 @@ export const useFunPuntoFijo = () => {
     }
 
     const Fun = x => {
-        const calculo = Math.exp(-x);
+        const calculo = Math.exp(x-1) -15 * Math.pow(x,2);
+        // Math.exp(-x);
+        // e^{x-1}-15x^2
         return calculo
     }
 

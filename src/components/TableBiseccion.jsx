@@ -5,9 +5,9 @@ export const TableBiseccion = ({ calculos }) => {
         <>
             <div className='md:11/12 md:ml-5 mt-10 '>
                 <div className='overflow-x-auto relative shadow-md rounded-lg mb-20'>
-                    <table className='w-full text-sm text-left text-gray-100 dark:text-gray-400'>
+                    <table className='w-full text-sm text-left text-gray-100 dark:bg-indigo-600'>
                         <thead>
-                            <tr className='text-md text-bold text-white uppercase bg-gray-50 dark:bg-indigo-600 dark:text-white-200'>
+                            <tr className='text-md text-bold text-white uppercase bg-indigo-600'>
                                 <th scope="col" className='py-3 px-6' >Iteración</th>
                                 <th scope="col" className='py-3 px-6'>a</th>
                                 <th scope="col" className='py-3 px-6'>b</th>

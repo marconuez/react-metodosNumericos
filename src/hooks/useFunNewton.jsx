@@ -20,12 +20,14 @@ export const useFunNewton = () => {
     }
 
     const Fun1 = x => {
-        const calculo = Math.exp(-x) - x;
+        const calculo = Math.exp(x-1) - 5 * Math.pow(x,3);
+        // e^(x-1) - 5(x)^3
         return calculo
     }
 
     const Fun2 = x => {
-        const calculo = - Math.exp(-x) - 1;
+        const calculo = Math.exp(x-1) - 15 * Math.pow(x,2);
+        // e^(x-1)-15x^2
         return calculo
     }
 

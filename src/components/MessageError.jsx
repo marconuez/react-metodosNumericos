@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 const MessageError = ({ errorMessage, setIsError }) => {
 
+
     return (
         <>
             <div
@@ -11,17 +12,17 @@ const MessageError = ({ errorMessage, setIsError }) => {
                     {/*content*/}
                     <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                         {/*header*/}
-                        <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                            <h3 className="text-3xl font-semibold">
+                        <div className="items-center justify-between pt-4 border-slate-200 rounded-t">
+                            <h3 className="font-black text-3xl text-center mb-4">
                                 Mensaje de Error
                             </h3>
                             <button
                                 className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                                 onClick={() => setIsError(false)}
                             >
-                                <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                                {/* <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
                                     ×
-                                </span>
+                                </span> */}
                             </button>
                         </div>
                         {/*body*/}
@@ -31,9 +32,9 @@ const MessageError = ({ errorMessage, setIsError }) => {
                             </p>
                         </div>
                         {/*footer*/}
-                        <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                        <div className="flex items-center justify-end p-6 border-slate-200 rounded-b">
                             <button
-                                className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                className="bg-indigo-600 text-white font-bold uppercase rounded-md w-full p-3 my-2 hover:bg-indigo-700 cursor-pointer transition-colors"
                                 type="button"
                                 onClick={() => setIsError(false)}
                             >

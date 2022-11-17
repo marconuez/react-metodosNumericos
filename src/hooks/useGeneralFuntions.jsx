@@ -79,10 +79,20 @@ const useGeneralFuntions = () => {
             firstValue = parseFloat(valuesArray[0]);
             secondValue = parseFloat(valuesArray[1]);
 
+            if(isNaN(firstValue)) {
+                firstValue = 0;
+            }
+
+            if(isNaN(secondValue)){
+                secondValue = 0;
+            }
+        
             return firstValue - secondValue;
         }
         return term;
     }
+
+    // e^(x-1) - 5(x)^3
 
     /************************************************************************************
     * Author: Johan McGregor
@@ -97,6 +107,14 @@ const useGeneralFuntions = () => {
 
             firstValue = parseFloat(valuesArray[0]);
             secondValue = parseFloat(valuesArray[1]);
+
+            if(isNaN(firstValue)) {
+                firstValue = 0;
+            }
+
+            if(isNaN(secondValue)){
+                secondValue = 0;
+            }
 
             return firstValue + secondValue;
         }

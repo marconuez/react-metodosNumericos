@@ -12,11 +12,11 @@ export const Header = ({title, number, handleInput, funcion}) => {
                     <div className='grid grid-cols-2 gap-4'>
                         <div className="mb-5">
                             <label htmlFor="funcion" className="block text-gray-700 uppercase font-bold">F(X)=</label>
-                            <input id="funcion" type="text" placeholder="Ingrese la funcion" className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"  value='e^(-x)-x' disabled />
+                            <input id="funcion" type="text" placeholder="Ingrese la funcion" className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md disabled:opacity-75"  value='e^(x-1) - 5(x)^3'  />
                         </div>
                         <div className="mb-5">
                             <label htmlFor="funcionG" className="block text-gray-700 uppercase font-bold">G(X)=</label>
-                            <input id="funcionG" type="text" placeholder="Ingrese la funcion" className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"  value='e^(-x)' disabled />
+                            <input id="funcionG" type="text" placeholder="Ingrese la funcion" className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md disabled:opacity-20"  value='e^(x-1)-15x^2'  />
                         </div>
                     </div>
 
@@ -28,7 +28,7 @@ export const Header = ({title, number, handleInput, funcion}) => {
                         </div>
                         <div className="mb-5">
                             <label htmlFor="es" className="block text-gray-700 uppercase font-bold">Es=</label>
-                            <input id="es" type="number" placeholder="Criterio de tolerancia" className=" border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md" value={number.criterioTolerancia} onChange={handleInput} name="criterioTolerancia" disabled />
+                            <input id="es" type="number" placeholder="Criterio de tolerancia" className=" border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md" value={number.criterioTolerancia} onChange={handleInput} name="criterioTolerancia"  />
                         </div>
                     </div>
 

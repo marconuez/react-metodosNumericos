@@ -31,7 +31,7 @@ export const useFalsaPosicion = () => {
     event.preventDefault();
     setErrorMessage('')
     setIsError(false);
-    const { funcionString, IntervaloA, IntervaloB } = number;
+    const { funcionString, IntervaloA, IntervaloB, numeroIteraciones } = number;
 
     let newFuncionString = funcionString.trim().replace(/ /g, "");
 
@@ -53,7 +53,8 @@ export const useFalsaPosicion = () => {
     n = 1;
     a = Number(IntervaloA);
     b = Number(IntervaloB);
-    es = 0.5 * Math.pow(10, (2 - number.numeroIteraciones));
+    es = 0.5 * Math.pow(10, (2 - Number(numeroIteraciones)));
+    console.log(es)
     Ar = 0;
 
     if (validateFunction(rightTerm, leftTerm, operator, a) * validateFunction(rightTerm, leftTerm, operator, b) < 0) {
